@@ -8,6 +8,11 @@ Start your frontend react application without unnecessary boilerplate codes from
 2.  yarn
 3.  yarn start
 ```
+```
+1.  git clone https://github.com/Chabbax/without-create-react-app.git
+2.  npm install
+3.  npm start
+```
 
 ## Checklist 
 - [x] No boilerplate code
