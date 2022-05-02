@@ -1,5 +1,5 @@
 # without-create-react-app
-Start your frontend react application without unnecessary boilerplate codes from &lt;npx create-react-app>
+Start your frontend react application without unnecessary boilerplate codes from &lt;npx create-react-app> :tada:
 
 ## Getting Started - Installation :computer:
 
@@ -8,6 +8,8 @@ Start your frontend react application without unnecessary boilerplate codes from
 2.  yarn
 3.  yarn start
 ```
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
+
+## Getting Started - Installation :computer:
+- [x] No boilerplate code
+- [x] Lightweight and clean
+
