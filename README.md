@@ -9,7 +9,7 @@ Start your frontend react application without unnecessary boilerplate codes from
 3.  yarn start
 ```
 
-## Getting Started - Installation :computer:
+## Checklist 
 - [x] No boilerplate code
 - [x] Lightweight and clean
 
