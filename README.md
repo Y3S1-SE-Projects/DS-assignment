@@ -1,4 +1,6 @@
-# without-create-react-app
+# without-create-react-app :sparkles:
+![logo](img/logo.jpg "logo")
+
 Start your frontend react application without unnecessary boilerplate codes from &lt;npx create-react-app> :tada:
 
 ## Getting Started - Installation :computer:
