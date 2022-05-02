@@ -6,4 +6,5 @@ Start your frontend react application without unnecessary boilerplate codes from
 ```
 1.  git clone https://github.com/Chabbax/without-create-react-app.git
 2.  yarn
+3.  yarn start
 ```
