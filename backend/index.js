@@ -10,10 +10,12 @@ import cors from "cors";
 
 const app = express();
 dotenv.config();
+const URL = process.env.MONGO;
+const PORT = process.env.PORT;
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO);
+    await mongoose.connect(URL);
     console.log("Connected to mongoDB.");
   } catch (error) {
     throw error;
@@ -30,23 +32,15 @@ app.use(cookieParser())
 app.use(express.json());
 
 
-app.use((err, req, res) => {
-  const errorStatus = err.status || 500;
-  const errorMessage = err.message || "Something went wrong!";
-  return res.status(errorStatus).json({
-    success: false,
-    status: errorStatus,
-    message: errorMessage,
-    stack: err.stack,
-  });
-});
-
-app.listen(8800, () => {
+app.listen(PORT, () => {
   connect();
   console.log("Connected to backend.");
 });
 
-app.use("/api/auth", authRoute);
-app.use("/api/users", usersRoute);
+app.use("/auth", authRoute);
+//app.use("/api/auth", authRoute);
+app.use("/users", usersRoute);
+//app.use("/api/users", usersRoute);
 app.use("/hotels", hotelsRoute);
-app.use("/api/rooms", roomsRoute);
+app.use("/rooms", roomsRoute);
+//app.use("/api/rooms", roomsRoute);
