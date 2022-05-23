@@ -1,5 +1,6 @@
 import Hotel from "../models/Hotel.js";
 import Room from "../models/Room.js";
+import hotels from "../routes/hotels.js";
 
 export const createHotel = async (req, res, next) => {
   const newHotel = new Hotel(req.body);
@@ -52,11 +53,11 @@ export const getHotels = async (req, res, next) => {
   }
 };
 export const countByCity = async (req, res, next) => {
-  const cities = req.params.city;
+  const cities = req.query.cities.split(",");
   try {
     const list = await Promise.all(
-      cities.map((city) => {
-        Hotel.countDocuments({ city: city });
+      cities.map(city=> {
+        return Hotel.countDocuments({ city: city });
       })
     );
     res.status(200).json(list);
