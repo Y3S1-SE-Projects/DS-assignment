@@ -9,6 +9,7 @@ import {
   SkeletonText,
   Text,
 } from "@chakra-ui/react";
+import { ChakraProvider, theme } from "@chakra-ui/react";
 import { FaLocationArrow, FaTimes } from "react-icons/fa";
 
 import {
@@ -68,6 +69,7 @@ function GoogleAPI() {
   }
 
   return (
+      <ChakraProvider theme={theme}>
     <Flex
       position="relative"
       flexDirection="column"
@@ -146,6 +148,7 @@ function GoogleAPI() {
         </HStack>
       </Box>
     </Flex>
+        </ChakraProvider>
   );
 }
 
