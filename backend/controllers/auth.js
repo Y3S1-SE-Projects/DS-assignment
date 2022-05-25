@@ -2,6 +2,7 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import { createError } from "../utils/error.js";
 import jwt from "jsonwebtoken";
+import nodemailer from "nodemailer";
 
 export const register = async (req, res, next) => {
   try {
@@ -14,6 +15,31 @@ export const register = async (req, res, next) => {
     });
 
     await newUser.save();
+    const {name, email}= req.body;
+
+    const transporter = nodemailer.createTransport({
+      service: 'hotmail',
+      auth: {
+        user: 'sachinikuruppu@outlook.com',
+        pass: 'Neon@013'
+      }
+    });
+
+    const mailOptions = {
+      from: 'sachinikuruppu@outlook.com',
+      to: `${email}`,
+      subject: 'User Account Confirmation',
+      text: 'Your user account created Thank you!'
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+
     res.status(200).send("User has been created.");
   } catch (err) {
     next(err);
