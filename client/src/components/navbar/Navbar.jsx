@@ -9,8 +9,15 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-          <span className="logo">lamabooking</span>
+          <span className="logo">Hotel Booking </span>
         </Link>
+        <Link
+          to="/googlemap"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <span className="logo">Google Maps</span>
+        </Link>
+
         {user ? (
           user.username
         ) : (
