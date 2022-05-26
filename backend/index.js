@@ -1,3 +1,4 @@
+// Imports
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -8,11 +9,15 @@ import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+// Creating expressweb framework
 const app = express();
+
+// Key-Value pairs
 dotenv.config();
 const URL = process.env.MONGO;
 const PORT = process.env.PORT;
 
+// MongoDB connection
 const connect = async () => {
   try {
     await mongoose.connect(URL);
@@ -21,7 +26,6 @@ const connect = async () => {
     throw error;
   }
 };
-
 mongoose.connection.on("disconnected", () => {
   console.log("mongoDB disconnected!");
 });
@@ -31,6 +35,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
+// App running on port
 app.listen(PORT, () => {
   connect();
   console.log("Connected to backend.");
