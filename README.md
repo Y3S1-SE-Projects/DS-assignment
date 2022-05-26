@@ -4,20 +4,20 @@
 Assume that you have been asked to develop a hotel reservation platform. Following are the requirements
 given by the client and/or the Business Analyst. 
 
-• The system should have a web interface where travelers can reserve hotel rooms.
-• A service should be there where hotels can add/update/delete reservation information.
-• A service should be there where travelers can reserve rooms and cancel the reservation.
-• A traveler may make multiple reservations as long as the dates don’t clash.
-• Once a reservation is made, a traveler may (optionally) reserve a taxi, where a request may be
+1.  The system should have a web interface where travelers can reserve hotel rooms.
+2.  A service should be there where hotels can add/update/delete reservation information.
+3.  A service should be there where travelers can reserve rooms and cancel the reservation.
+4.  A traveler may make multiple reservations as long as the dates don’t clash.
+5.  Once a reservation is made, a traveler may (optionally) reserve a taxi, where a request may be
 sent to a taxi service (so there should be a third party taxi service).
-• The payment for the reservations can be made using credit cards. Not all reservations may require
+6.  The payment for the reservations can be made using credit cards. Not all reservations may require
 pre-payment (it’s upto the hotel to decide whether pre-payment is required or not).
-• The system can connect to a payment gateway for credit card transactions. The information that
+7.  The system can connect to a payment gateway for credit card transactions. The information that
 should be submitted includes the credit card number, amount, CVC number (3 digit no. at the
 back of the credit card) and card holder’s name.
-• Once the payment is made the user should be given a confirmation of the appointment via SMS
+8.  Once the payment is made the user should be given a confirmation of the appointment via SMS
 and email. These confirmations may be sent through third-party sms and email services.
-• Hotel location may be displayed through the google map service. 
+9.  Hotel location may be displayed through the google map service. 
 
 
 ## Getting Started with PayPal - Installation :computer:
