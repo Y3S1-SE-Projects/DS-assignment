@@ -22,7 +22,9 @@ const Navbar = () => {
           user.username
         ) : (
           <div className="navItems">
+            <Link to="/register">
             <button className="navButton">Register</button>
+            </Link>
             <Link to="/login">
               <button className="navButton">Login</button>
             </Link>
