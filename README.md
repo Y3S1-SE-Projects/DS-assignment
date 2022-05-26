@@ -1,4 +1,5 @@
-# DS-assignment
+# DS-assignment2
+![architecture](images/architecture.png "architecture")
 
 ## Project Requirements
 Assume that you have been asked to develop a hotel reservation platform. Following are the requirements
