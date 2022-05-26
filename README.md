@@ -18,7 +18,7 @@ This is the paypal gateway integration
 
 ## Getting Started with Google Maps API - Installation :computer:
 
-## Features?
+Features?
 
 1. Google maps in React
 2. Adding Markers
