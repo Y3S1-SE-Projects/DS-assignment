@@ -4,6 +4,7 @@ import { createError } from "../utils/error.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
 
+// Authentication using brcypt and JWT token for regsitration
 export const register = async (req, res, next) => {
   try {
     const salt = bcrypt.genSaltSync(10);
@@ -15,28 +16,28 @@ export const register = async (req, res, next) => {
     });
 
     await newUser.save();
-    const {name, email}= req.body;
+    const { name, email } = req.body;
 
     const transporter = nodemailer.createTransport({
-      service: 'hotmail',
+      service: "hotmail",
       auth: {
-        user: 'sachinikuruppu@outlook.com',
-        pass: 'Neon@013'
-      }
+        user: "sachinikuruppu@outlook.com",
+        pass: "Neon@013",
+      },
     });
 
     const mailOptions = {
-      from: 'sachinikuruppu@outlook.com',
+      from: "sachinikuruppu@outlook.com",
       to: `${email}`,
-      subject: 'User Account Confirmation',
-      text: 'Your user account created Thank you!'
+      subject: "User Account Confirmation",
+      text: "Your user account created Thank you!",
     };
 
-    transporter.sendMail(mailOptions, function(error, info){
+    transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log(error);
       } else {
-        console.log('Email sent: ' + info.response);
+        console.log("Email sent: " + info.response);
       }
     });
 
@@ -45,6 +46,8 @@ export const register = async (req, res, next) => {
     next(err);
   }
 };
+
+// Authentication using brcypt and JWT token for login
 export const login = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });

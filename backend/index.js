@@ -1,3 +1,4 @@
+// Imports
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -8,11 +9,15 @@ import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+// Creating web framework
 const app = express();
+
+// key-value pairs
 dotenv.config();
 const URL = process.env.MONGO;
 const PORT = process.env.PORT;
 
+// MongoDB connection
 const connect = async () => {
   try {
     await mongoose.connect(URL);
@@ -31,6 +36,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
+// Server port
 app.listen(PORT, () => {
   connect();
   console.log("Connected to backend.");
