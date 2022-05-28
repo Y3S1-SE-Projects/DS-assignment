@@ -9,7 +9,7 @@ root.render(
   <React.StrictMode>
     <AuthContextProvider>
       <SearchContextProvider>
-          <App />
+        <App />
       </SearchContextProvider>
     </AuthContextProvider>
   </React.StrictMode>

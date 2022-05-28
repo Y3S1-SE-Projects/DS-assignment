@@ -4,7 +4,10 @@ import Home from "./pages/home/Home";
 import Hotel from "./pages/hotel/Hotel";
 import List from "./pages/list/List";
 import Login from "./pages/login/Login";
+<<<<<<< HEAD
 import Register from "./pages/register/register";
+=======
+>>>>>>> ddecf562508628e76dea6243139061910ea775a1
 
 // Google maps api imports
 import GoogleAPI from "./components/GoogleAPI";
@@ -28,7 +31,10 @@ function App() {
             <Route path="/hotels/:id" element={<Hotel />} />
             <Route path="/login" element={<Login />} />
             <Route path="/googlemap" element={<GoogleAPI />} />
+<<<<<<< HEAD
             <Route path="/register" element={<Register />} />
+=======
+>>>>>>> ddecf562508628e76dea6243139061910ea775a1
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </BrowserRouter>

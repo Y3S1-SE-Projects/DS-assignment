@@ -9,10 +9,17 @@ import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+<<<<<<< HEAD
 // Creating web framework
 const app = express();
 
 // key-value pairs
+=======
+// Creating expressweb framework
+const app = express();
+
+// Key-Value pairs
+>>>>>>> ddecf562508628e76dea6243139061910ea775a1
 dotenv.config();
 const URL = process.env.MONGO;
 const PORT = process.env.PORT;
@@ -26,7 +33,6 @@ const connect = async () => {
     throw error;
   }
 };
-
 mongoose.connection.on("disconnected", () => {
   console.log("mongoDB disconnected!");
 });
@@ -36,7 +42,11 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
+<<<<<<< HEAD
 // Server port
+=======
+// App running on port
+>>>>>>> ddecf562508628e76dea6243139061910ea775a1
 app.listen(PORT, () => {
   connect();
   console.log("Connected to backend.");

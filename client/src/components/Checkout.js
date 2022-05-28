@@ -26,7 +26,20 @@ const Checkout = () => {
         src={ProductImage}
         alt="Product"
       />
+<<<<<<< HEAD
 
+=======
+      {/* <button className="checkout-button">
+        <div className="grey-circle">
+          <div className="purple-circle">
+            <img className="icon" src={CardIcon} alt="credit-card-icon" />
+          </div>
+        </div>
+        <div className="text-container">
+          <p className="text">Buy</p>
+        </div>
+      </button> */}
+>>>>>>> ddecf562508628e76dea6243139061910ea775a1
       <div className="separator"></div>
       <div className="paypal">
         <p className="checkout-title">
